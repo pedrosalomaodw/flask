@@ -33,7 +33,21 @@ def hello():
 $ flask run
   * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
+## A simple example using templates
 
+````py
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return render_template("index.html")
+
+````
+render_template will capture the "index.html" file from the folder called "templates", 
+this folder is where your .html files that will be displayed on the screen will be located. 
+Do you want to know more in depth? I recommend you look at the documentation
 
 ## Donate
 
